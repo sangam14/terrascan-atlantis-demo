@@ -14,7 +14,7 @@ locals {
 resource "aws_s3_bucket" cloudtrail {
   bucket        = "my-cloudtrail-bucket"
   acl           = var.acl
-  force_destroy = true
+  force_destroy = false
 
   versioning {
     enabled = var.versioning_enabled
